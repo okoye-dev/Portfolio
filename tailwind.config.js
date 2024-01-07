@@ -20,10 +20,6 @@ module.exports = {
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
       }),
-      fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        opensans: ["Open Sans", "sans-serif"],
-      },
       content: {
         brush: "url('./assets/brush.png')",
         person1: "url('./assets/person-1.png')",
@@ -32,12 +28,17 @@ module.exports = {
       },
     },
     screens: {
-      xs: "480px",
-      ss: "620px",
-      sm: "768px",
-      md: "1060px",
-      lg: "1200px",
-      xl: "1700px",
+      sm: { min: "360px", max: "799px" },
+      // => @media (min-width: 360px) { ... }
+
+      ipad: "700px",
+      // => @media (min-width: 800px) { ... }
+
+      md: "800px",
+      // => @media (min-width: 800px) { ... }
+
+      lg: "1440px",
+      // => @media (min-width: 1440px) { ... }
     },
   },
   plugins: [],
